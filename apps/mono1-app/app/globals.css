@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@source "../../packages/ui/src"; /* <-- BAS YE LINE ADD KAREIN */
+
+:root {
+  --primary: #2563eb; /* Blue Color */
+  --primary-foreground: #ffffff;
+}
+
+button {
+  border-radius: 9999px; /* Rounded Pill Button */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
